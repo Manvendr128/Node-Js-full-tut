@@ -52,11 +52,18 @@ const server = http.createServer((req,res)=>{
   res.setHeader('location','/');
   return res.end();
   }
-  //Save data in file
-  // fs.writeFileSync("user.txt","monu attri");
-  // res.statusCode = 302;
-  // res.setHeader('location','/');
-  // return res.end();
+  res.setHeader("Content-Type","text/html");
+  res.write(
+    `<html>
+      <head>
+        <title>Form Details</title>
+        <body>
+          <h2>Like/Share/Subscribe</h2>
+        </body>
+      </head>
+    </html>`
+  )
+  return res.end();
 });
 
 const port = 3001;
