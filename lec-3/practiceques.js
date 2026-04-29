@@ -5,10 +5,15 @@ const server = http.createServer((req,res)=>{
     res.write("you are now home page");
     return res.end();
   }
-  else if(req.url.toLowerCase()==='/Kids'){
-    res.write("you are Kids page.")
-    return res.end();
-  }
+  // else if(req.url.toLowerCase()==='/Kids'){
+  //   res.write("you are Kids page.")
+  //   return res.end();
+  // }
+  else if(req.url.toLowerCase()==='/kids'){
+    res.write("You are Now Kids page")
+    return res.end()
+   }
+  
   else if(req.url.toLowerCase()==='/carts'){
     res.write("you are carts page.")
     return res.end();
